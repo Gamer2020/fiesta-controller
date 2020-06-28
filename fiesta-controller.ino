@@ -2,34 +2,43 @@
 
 String command;
 
-void setup() {
-  Keyboard.begin();
-  Serial.begin(9600); 
-  delay(2000);  
-  Serial.println("Waiting for input!");
+void setup()
+{
+    Keyboard.begin();
+    Serial.begin(9600);
+    delay(2000);
+    Serial.println("Waiting for input!");
 }
 
-void loop() {
+void loop()
+{
+    if (Serial.available())
+    {
+        command = Serial.read();
 
-        if(Serial.available()){
-        command = Serial.readStringUntil('\n');
-         
-        if(command.equals("1")){
-            Serial.println("1");
+        if (command.equals("97"))
+        {
+            Serial.println("a");
+            //Hold ASCII 'a'
+            Keyboard.press(97);
         }
-        else if(command.equals("2")){
-            Serial.println("2");
+        else if (command.equals("98"))
+        {
+            Serial.println("b");
+            //Release ASCII 'a'
+            Keyboard.release(97);
         }
-        else if(command.equals("3")){
-            Serial.println("3");
+        else if (command.equals("99"))
+        {
+            Serial.println("c");
         }
-        else if(command.equals("4")){
-            Serial.println("4");
-            //Send an ASCII 'A'
-            Keyboard.write(65);
+        else if (command.equals("100"))
+        {
+            Serial.println("d");
         }
-        else{
-            Serial.println("Invalid command");
+        else
+        {
+            Serial.println("Invalid command " + command);
         }
     }
 }

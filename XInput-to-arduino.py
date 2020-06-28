@@ -1,4 +1,7 @@
+import serial
 from XInput import *
+
+arduinoSerial = serial.Serial("COM4", 9600)
 
 while 1:
     events = get_events()
@@ -41,6 +44,8 @@ while 1:
 
             elif event.button == "A":
                 print("A Pressed!")
+                arduinoSerial.write(b'a')
+                print(arduinoSerial.readline())
             elif event.button == "B":
                 print("B Pressed!")
             elif event.button == "Y":
@@ -75,6 +80,8 @@ while 1:
 
             elif event.button == "A":
                 print("A Released!")
+                arduinoSerial.write(b'b')
+                print(arduinoSerial.readline())
             elif event.button == "B":
                 print("B Released!")
             elif event.button == "Y":
