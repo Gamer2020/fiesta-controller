@@ -1,5 +1,14 @@
 import serial
-from XInput import *
+from XInput import (
+    get_events,
+    EVENT_CONNECTED,
+    EVENT_DISCONNECTED,
+    EVENT_STICK_MOVED,
+    LEFT,
+    RIGHT,
+    EVENT_BUTTON_PRESSED,
+    EVENT_BUTTON_RELEASED,
+)
 
 arduinoSerial = serial.Serial("COM7", 9600)
 
