@@ -77,10 +77,10 @@ while 1:
         elif event.type == EVENT_BUTTON_PRESSED:
             if event.button == "LEFT_THUMB":
                 print("LEFT_THUMB Pressed!")
-                arduinoSerial.write(b"v")
+                arduinoSerial.write(b"q")
             elif event.button == "RIGHT_THUMB":
                 print("RIGHT_THUMB Pressed!")
-                arduinoSerial.write(b"q")
+                arduinoSerial.write(b"v")
 
             elif event.button == "LEFT_SHOULDER":
                 print("LEFT_SHOULDER Pressed!")
@@ -89,7 +89,6 @@ while 1:
 
             elif event.button == "BACK":
                 print("BACK Pressed!")
-                arduinoSerial.write(b"i")
             elif event.button == "START":
                 print("START Pressed!")
 
@@ -102,6 +101,7 @@ while 1:
                 arduinoSerial.write(b"j")
             elif event.button == "DPAD_DOWN":
                 print("DPAD_DOWN Pressed!")
+                arduinoSerial.write(b"i")
 
             elif event.button == "A":
                 print("A Pressed!")
@@ -132,14 +132,14 @@ while 1:
             elif event.button == "START":
                 print("START Released!")
 
-            elif event.button == "DPAD_LEFT":
-                print("DPAD_LEFT Released!")
-            elif event.button == "DPAD_RIGHT":
-                print("DPAD_RIGHT Released!")
+            # elif event.button == "DPAD_LEFT":
+            #     print("DPAD_LEFT Released!")
+            # elif event.button == "DPAD_RIGHT":
+            #     print("DPAD_RIGHT Released!")
             # elif event.button == "DPAD_UP":
             #     print("DPAD_UP Released!")
-            elif event.button == "DPAD_DOWN":
-                print("DPAD_DOWN Released!")
+            # elif event.button == "DPAD_DOWN":
+            #     print("DPAD_DOWN Released!")
 
             # elif event.button == "A":
             #     print("A Released!")
