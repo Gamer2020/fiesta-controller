@@ -1,4 +1,6 @@
+import os
 import serial
+import yaml
 from XInput import (
     get_events,
     EVENT_CONNECTED,
@@ -10,7 +12,19 @@ from XInput import (
     EVENT_BUTTON_RELEASED,
 )
 
-arduinoSerial = serial.Serial("COM7", 9600)
+config_file = "config.yaml"
+
+if os.path.exists(config_file) is False:
+    print(config_file + " Not found!")
+    quit()
+
+with open(config_file, "r") as file:
+    config_list = yaml.full_load(file)
+
+arduino_port = config_list["port"]
+arduino_baud = config_list["baud"]
+
+arduinoSerial = serial.Serial(arduino_port, arduino_baud)
 
 while 1:
     events = get_events()
