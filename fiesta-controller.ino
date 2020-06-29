@@ -98,12 +98,12 @@ void loop()
         else if (command.equals(INPUT_COMMAND_o))
         {
             //Mouse Up
-            Mouse.move(0, 0, 1);
+            Mouse.move(0, -1, 0);
         }
         else if (command.equals(INPUT_COMMAND_p))
         {
             //Mouse Down
-            Mouse.move(0, 0, -10);
+            Mouse.move(0, 1, 0);
         }
         else if (command.equals(INPUT_COMMAND_q))
         {
