@@ -14,39 +14,39 @@ while 1:
             if event.stick == LEFT:
                 if (event.x == 0.0) and (event.y == 0.0):
                     print("Left Stick is neutral")
-                    arduinoSerial.write(b'b')
-                    arduinoSerial.write(b'd')
-                    arduinoSerial.write(b'f')
-                    arduinoSerial.write(b'h')
-                elif (event.x < 0.0): #Left
-                    arduinoSerial.write(b'a')
-                    arduinoSerial.write(b'h')
-                elif (event.x > 0.0): #Right
-                    arduinoSerial.write(b'b')
-                    arduinoSerial.write(b'g')
-                if (event.y > 0.0): #Up
-                    arduinoSerial.write(b'c')
-                    arduinoSerial.write(b'f')
-                elif (event.y < 0.0): #Down
-                    arduinoSerial.write(b'd')
-                    arduinoSerial.write(b'e')
+                    arduinoSerial.write(b"b")
+                    arduinoSerial.write(b"d")
+                    arduinoSerial.write(b"f")
+                    arduinoSerial.write(b"h")
+                elif event.x < 0.0:  # Left
+                    arduinoSerial.write(b"a")
+                    arduinoSerial.write(b"h")
+                elif event.x > 0.0:  # Right
+                    arduinoSerial.write(b"b")
+                    arduinoSerial.write(b"g")
+                if event.y > 0.0:  # Up
+                    arduinoSerial.write(b"c")
+                    arduinoSerial.write(b"f")
+                elif event.y < 0.0:  # Down
+                    arduinoSerial.write(b"d")
+                    arduinoSerial.write(b"e")
 
             elif event.stick == RIGHT:
                 if (event.x == 0.0) and (event.y == 0.0):
                     print("Right Stick is neutral")
-                    arduinoSerial.write(b'l')
-                elif (event.x < 0.0): #Left
-                    arduinoSerial.write(b'k')
-                    arduinoSerial.write(b'n')
-                elif (event.x > 0.0): #Right
-                    arduinoSerial.write(b'k')
-                    arduinoSerial.write(b'm')
-                if (event.y > 0.0): #Up
-                    arduinoSerial.write(b'k')
-                    arduinoSerial.write(b'o')
-                elif (event.y < 0.0): #Down
-                    arduinoSerial.write(b'k')
-                    arduinoSerial.write(b'p')
+                    arduinoSerial.write(b"l")
+                elif event.x < 0.0:  # Left
+                    arduinoSerial.write(b"k")
+                    arduinoSerial.write(b"n")
+                elif event.x > 0.0:  # Right
+                    arduinoSerial.write(b"k")
+                    arduinoSerial.write(b"m")
+                if event.y > 0.0:  # Up
+                    arduinoSerial.write(b"k")
+                    arduinoSerial.write(b"o")
+                elif event.y < 0.0:  # Down
+                    arduinoSerial.write(b"k")
+                    arduinoSerial.write(b"p")
         # elif event.type == EVENT_TRIGGER_MOVED:
         #     if event.trigger == LEFT:
         #     elif event.trigger == RIGHT:
@@ -64,7 +64,7 @@ while 1:
 
             elif event.button == "BACK":
                 print("BACK Pressed!")
-                arduinoSerial.write(b'i')
+                arduinoSerial.write(b"i")
             elif event.button == "START":
                 print("START Pressed!")
 
@@ -74,7 +74,7 @@ while 1:
                 print("DPAD_RIGHT Pressed!")
             elif event.button == "DPAD_UP":
                 print("DPAD_UP Pressed!")
-                arduinoSerial.write(b'j')
+                arduinoSerial.write(b"j")
             elif event.button == "DPAD_DOWN":
                 print("DPAD_DOWN Pressed!")
 
