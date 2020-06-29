@@ -20,86 +20,86 @@ void loop()
     {
         command = Serial.read();
 
-        if (command.equals(input_command_a))
+        if (command.equals(INPUT_COMMAND_a))
         {
             //Hold ASCII 'a'
             Keyboard.press(97);
         }
-        else if (command.equals(input_command_b))
+        else if (command.equals(INPUT_COMMAND_b))
         {
             //Release ASCII 'a'
             Keyboard.release(97);
         }
-        else if (command.equals(input_command_c))
+        else if (command.equals(INPUT_COMMAND_c))
         {
             //Hold ASCII 'w'
             Keyboard.press(119);
         }
-        else if (command.equals(input_command_d))
+        else if (command.equals(INPUT_COMMAND_d))
         {
             //Release ASCII 'w'
             Keyboard.release(119);
         }
-        else if (command.equals(input_command_e))
+        else if (command.equals(INPUT_COMMAND_e))
         {
             //Hold ASCII 's'
             Keyboard.press(115);
         }
-        else if (command.equals(input_command_f))
+        else if (command.equals(INPUT_COMMAND_f))
         {
             //Release ASCII 's'
             Keyboard.release(115);
         }
-        else if (command.equals(input_command_g))
+        else if (command.equals(INPUT_COMMAND_g))
         {
             //Hold ASCII 'd'
             Keyboard.press(100);
         }
-        else if (command.equals(input_command_h))
+        else if (command.equals(INPUT_COMMAND_h))
         {
             //Release ASCII 'd'
             Keyboard.release(100);
         }
-        else if (command.equals(input_command_i))
+        else if (command.equals(INPUT_COMMAND_i))
         {
             //press ASCII 'HOME'
             Keyboard.press(KEY_HOME);
             delay(KEY_DELAY);
             Keyboard.release(KEY_HOME);
         }
-        else if (command.equals(input_command_j))
+        else if (command.equals(INPUT_COMMAND_j))
         {
             //press ASCII 'm'
             Keyboard.press(109);
             delay(KEY_DELAY);
             Keyboard.release(109);
         }
-        else if (command.equals(input_command_k))
+        else if (command.equals(INPUT_COMMAND_k))
         {
             //Hold Right Mouse
             Mouse.press(MOUSE_RIGHT);
         }
-        else if (command.equals(input_command_l))
+        else if (command.equals(INPUT_COMMAND_l))
         {
             //Release Right Mouse
             Mouse.release(MOUSE_RIGHT);
         }
-        else if (command.equals(input_command_m))
+        else if (command.equals(INPUT_COMMAND_m))
         {
             //Mouse Right
             Mouse.move(5, 0, 0);
         }
-        else if (command.equals(input_command_n))
+        else if (command.equals(INPUT_COMMAND_n))
         {
             //Mouse Left
             Mouse.move(-5, 0, 0);
         }
-        else if (command.equals(input_command_o))
+        else if (command.equals(INPUT_COMMAND_o))
         {
             //Mouse Up
             Mouse.move(0, 0, 1);
         }
-        else if (command.equals(input_command_p))
+        else if (command.equals(INPUT_COMMAND_p))
         {
             //Mouse Down
             Mouse.move(0, 0, -10);
