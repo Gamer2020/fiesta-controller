@@ -1,0 +1,31 @@
+#ifndef commands_h
+#define commands_h
+
+#define input_command_a "97"
+#define input_command_b "98"
+#define input_command_c "99"
+#define input_command_d "100"
+#define input_command_e "101"
+#define input_command_f "102"
+#define input_command_g "103"
+#define input_command_h "104"
+#define input_command_i "105"
+#define input_command_j "106"
+#define input_command_k "107"
+#define input_command_l "108"
+#define input_command_m "109"
+#define input_command_n "110"
+#define input_command_o "111"
+#define input_command_p "112"
+#define input_command_q "113"
+#define input_command_r "114"
+#define input_command_s "115"
+#define input_command_t "116"
+#define input_command_u "117"
+#define input_command_v "118"
+#define input_command_w "119"
+#define input_command_x "120"
+#define input_command_y "121"
+#define input_command_z "122"
+
+#endif

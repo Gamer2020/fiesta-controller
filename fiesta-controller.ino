@@ -2,6 +2,7 @@
 #include <Mouse.h>
 
 #include "include/config.h"
+#include "include/commands.h"
 
 String command;
 void setup()
@@ -19,86 +20,86 @@ void loop()
     {
         command = Serial.read();
 
-        if (command.equals("97"))
+        if (command.equals(input_command_a))
         {
             //Hold ASCII 'a'
             Keyboard.press(97);
         }
-        else if (command.equals("98"))
+        else if (command.equals(input_command_b))
         {
             //Release ASCII 'a'
             Keyboard.release(97);
         }
-        else if (command.equals("99"))
+        else if (command.equals(input_command_c))
         {
             //Hold ASCII 'w'
             Keyboard.press(119);
         }
-        else if (command.equals("100"))
+        else if (command.equals(input_command_d))
         {
             //Release ASCII 'w'
             Keyboard.release(119);
         }
-        else if (command.equals("101"))
+        else if (command.equals(input_command_e))
         {
             //Hold ASCII 's'
             Keyboard.press(115);
         }
-        else if (command.equals("102"))
+        else if (command.equals(input_command_f))
         {
             //Release ASCII 's'
             Keyboard.release(115);
         }
-        else if (command.equals("103"))
+        else if (command.equals(input_command_g))
         {
             //Hold ASCII 'd'
             Keyboard.press(100);
         }
-        else if (command.equals("104"))
+        else if (command.equals(input_command_h))
         {
             //Release ASCII 'd'
             Keyboard.release(100);
         }
-        else if (command.equals("105"))
+        else if (command.equals(input_command_i))
         {
             //press ASCII 'HOME'
             Keyboard.press(KEY_HOME);
             delay(KEY_DELAY);
             Keyboard.release(KEY_HOME);
         }
-        else if (command.equals("106"))
+        else if (command.equals(input_command_j))
         {
             //press ASCII 'm'
             Keyboard.press(109);
             delay(KEY_DELAY);
             Keyboard.release(109);
         }
-        else if (command.equals("107"))
+        else if (command.equals(input_command_k))
         {
             //Hold Right Mouse
             Mouse.press(MOUSE_RIGHT);
         }
-        else if (command.equals("108"))
+        else if (command.equals(input_command_l))
         {
             //Release Right Mouse
             Mouse.release(MOUSE_RIGHT);
         }
-        else if (command.equals("109"))
+        else if (command.equals(input_command_m))
         {
             //Mouse Right
             Mouse.move(5, 0, 0);
         }
-        else if (command.equals("110"))
+        else if (command.equals(input_command_n))
         {
             //Mouse Left
             Mouse.move(-5, 0, 0);
         }
-        else if (command.equals("111"))
+        else if (command.equals(input_command_o))
         {
             //Mouse Up
             Mouse.move(0, 0, 1);
         }
-        else if (command.equals("112"))
+        else if (command.equals(input_command_p))
         {
             //Mouse Down
             Mouse.move(0, 0, -10);
