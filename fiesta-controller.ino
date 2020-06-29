@@ -3,6 +3,7 @@
 
 #include "include/config.h"
 #include "include/commands.h"
+#include "include/keyboard_keys.h"
 
 String command;
 void setup()
@@ -23,46 +24,46 @@ void loop()
         if (command.equals(INPUT_COMMAND_a))
         {
             //Hold ASCII 'a'
-            Keyboard.press(97);
+            Keyboard.press(KEY_a);
         }
         else if (command.equals(INPUT_COMMAND_b))
         {
             //Release ASCII 'a'
-            Keyboard.release(97);
+            Keyboard.release(KEY_a);
         }
         else if (command.equals(INPUT_COMMAND_c))
         {
             //Hold ASCII 'w'
-            Keyboard.press(119);
+            Keyboard.press(KEY_w);
         }
         else if (command.equals(INPUT_COMMAND_d))
         {
             //Release ASCII 'w'
-            Keyboard.release(119);
+            Keyboard.release(KEY_w);
         }
         else if (command.equals(INPUT_COMMAND_e))
         {
             //Hold ASCII 's'
-            Keyboard.press(115);
+            Keyboard.press(KEY_s);
         }
         else if (command.equals(INPUT_COMMAND_f))
         {
             //Release ASCII 's'
-            Keyboard.release(115);
+            Keyboard.release(KEY_s);
         }
         else if (command.equals(INPUT_COMMAND_g))
         {
             //Hold ASCII 'd'
-            Keyboard.press(100);
+            Keyboard.press(KEY_d);
         }
         else if (command.equals(INPUT_COMMAND_h))
         {
             //Release ASCII 'd'
-            Keyboard.release(100);
+            Keyboard.release(KEY_d);
         }
         else if (command.equals(INPUT_COMMAND_i))
         {
-            //press ASCII 'HOME'
+            //press HOME
             Keyboard.press(KEY_HOME);
             delay(KEY_DELAY);
             Keyboard.release(KEY_HOME);
