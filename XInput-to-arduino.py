@@ -122,7 +122,7 @@ while 1:
             # elif event.button == "RIGHT_THUMB":
             #     print("RIGHT_THUMB Released!")
 
-            elif event.button == "LEFT_SHOULDER":
+            if event.button == "LEFT_SHOULDER":
                 print("LEFT_SHOULDER Released!")
             elif event.button == "RIGHT_SHOULDER":
                 print("RIGHT_SHOULDER Released!")
