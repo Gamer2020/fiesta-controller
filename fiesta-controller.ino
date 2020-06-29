@@ -71,9 +71,9 @@ void loop()
         else if (command.equals(INPUT_COMMAND_j))
         {
             //press ASCII 'm'
-            Keyboard.press(109);
+            Keyboard.press(KEY_m);
             delay(KEY_DELAY);
-            Keyboard.release(109);
+            Keyboard.release(KEY_m);
         }
         else if (command.equals(INPUT_COMMAND_k))
         {
@@ -104,6 +104,48 @@ void loop()
         {
             //Mouse Down
             Mouse.move(0, 0, -10);
+        }
+        else if (command.equals(INPUT_COMMAND_q))
+        {
+            //press TAB
+            Keyboard.press(KEY_TAB);
+            delay(KEY_DELAY);
+            Keyboard.release(KEY_TAB);
+        }
+        else if (command.equals(INPUT_COMMAND_r))
+        {
+            //press ASCII '1'
+            Keyboard.press(KEY_1);
+            delay(KEY_DELAY);
+            Keyboard.release(KEY_1);
+        }
+        else if (command.equals(INPUT_COMMAND_s))
+        {
+            //press ASCII '2'
+            Keyboard.press(KEY_2);
+            delay(KEY_DELAY);
+            Keyboard.release(KEY_2);
+        }
+        else if (command.equals(INPUT_COMMAND_t))
+        {
+            //press ASCII '3'
+            Keyboard.press(KEY_3);
+            delay(KEY_DELAY);
+            Keyboard.release(KEY_3);
+        }
+        else if (command.equals(INPUT_COMMAND_u))
+        {
+            //press ASCII '4'
+            Keyboard.press(KEY_4);
+            delay(KEY_DELAY);
+            Keyboard.release(KEY_4);
+        }
+        else if (command.equals(INPUT_COMMAND_v))
+        {
+            //press TAB
+            Keyboard.press(KEY_space);
+            delay(KEY_DELAY);
+            Keyboard.release(KEY_space);
         }
         else
         {
