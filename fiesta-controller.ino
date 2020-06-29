@@ -1,6 +1,8 @@
 #include <Keyboard.h>
 #include <Mouse.h>
 
+#include "include/config.h"
+
 String command;
 void setup()
 {
@@ -61,14 +63,14 @@ void loop()
         {
             //press ASCII 'HOME'
             Keyboard.press(KEY_HOME);
-            delay(800);
+            delay(KEY_DELAY);
             Keyboard.release(KEY_HOME);
         }
         else if (command.equals("106"))
         {
             //press ASCII 'm'
             Keyboard.press(109);
-            delay(500);
+            delay(KEY_DELAY);
             Keyboard.release(109);
         }
         else if (command.equals("107"))
