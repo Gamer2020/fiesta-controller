@@ -1,10 +1,11 @@
 #include <Keyboard.h>
+#include <Mouse.h>
 
 String command;
-
 void setup()
 {
     Keyboard.begin();
+    Mouse.begin();
     Serial.begin(9600);
     delay(2000);
     Serial.println("Waiting for input!");
@@ -65,10 +66,40 @@ void loop()
         }
         else if (command.equals("106"))
         {
-            //press ASCII 'HOME'
+            //press ASCII 'm'
             Keyboard.press(109);
             delay(500);
             Keyboard.release(109);
+        }
+        else if (command.equals("107"))
+        {
+            //Hold Right Mouse
+            Mouse.press(MOUSE_RIGHT);
+        }
+        else if (command.equals("108"))
+        {
+            //Release Right Mouse
+            Mouse.release(MOUSE_RIGHT);
+        }
+        else if (command.equals("109"))
+        {
+            //Mouse Right
+            Mouse.move(5, 0, 0);
+        }
+        else if (command.equals("110"))
+        {
+            //Mouse Left
+            Mouse.move(-5, 0, 0);
+        }
+        else if (command.equals("111"))
+        {
+            //Mouse Up
+            Mouse.move(0, 0, 1);
+        }
+        else if (command.equals("112"))
+        {
+            //Mouse Down
+            Mouse.move(0, 0, -10);
         }
         else
         {

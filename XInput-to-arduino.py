@@ -1,7 +1,7 @@
 import serial
 from XInput import *
 
-arduinoSerial = serial.Serial("COM4", 9600)
+arduinoSerial = serial.Serial("COM7", 9600)
 
 while 1:
     events = get_events()
@@ -12,7 +12,6 @@ while 1:
             print("Controller Disconnected!")
         elif event.type == EVENT_STICK_MOVED:
             if event.stick == LEFT:
-                print(event.dir)
                 if (event.x == 0.0) and (event.y == 0.0):
                     print("Left Stick is neutral")
                     arduinoSerial.write(b'b')
@@ -32,9 +31,22 @@ while 1:
                     arduinoSerial.write(b'd')
                     arduinoSerial.write(b'e')
 
-            #elif event.stick == RIGHT:
-                #print(event.x)
-                #print(event.y)
+            elif event.stick == RIGHT:
+                if (event.x == 0.0) and (event.y == 0.0):
+                    print("Right Stick is neutral")
+                    arduinoSerial.write(b'l')
+                elif (event.x < 0.0): #Left
+                    arduinoSerial.write(b'k')
+                    arduinoSerial.write(b'n')
+                elif (event.x > 0.0): #Right
+                    arduinoSerial.write(b'k')
+                    arduinoSerial.write(b'm')
+                if (event.y > 0.0): #Up
+                    arduinoSerial.write(b'k')
+                    arduinoSerial.write(b'o')
+                elif (event.y < 0.0): #Down
+                    arduinoSerial.write(b'k')
+                    arduinoSerial.write(b'p')
         # elif event.type == EVENT_TRIGGER_MOVED:
         #     if event.trigger == LEFT:
         #     elif event.trigger == RIGHT:
