@@ -10,7 +10,11 @@ from XInput import (
     RIGHT,
     EVENT_BUTTON_PRESSED,
     EVENT_BUTTON_RELEASED,
+    EVENT_TRIGGER_MOVED,
 )
+
+right_trig_flag = False
+left_trig_flag = False
 
 config_file = "config.yaml"
 
@@ -70,9 +74,22 @@ while 1:
                 elif event.y < 0.0:  # Down
                     arduinoSerial.write(b"k")
                     arduinoSerial.write(b"p")
-        # elif event.type == EVENT_TRIGGER_MOVED:
-        #     if event.trigger == LEFT:
-        #     elif event.trigger == RIGHT:
+        elif event.type == EVENT_TRIGGER_MOVED:
+            if event.trigger == LEFT:
+                if event.value == 0.0:
+                    print("LEFT_TRIGGER Neutral!")
+                    left_trig_flag = False
+                elif (event.value > 0.0) and (left_trig_flag == False):
+                    print("LEFT_TRIGGER Pressed!")
+                    left_trig_flag = True
+                    arduinoSerial.write(b"y")
+            elif event.trigger == RIGHT:
+                if event.value == 0.0:
+                    right_trig_flag = False
+                elif (event.value > 0.0) and (right_trig_flag == False):
+                    print("RIGHT_TRIGGER Pressed!")
+                    right_trig_flag = True
+                    arduinoSerial.write(b"z")
 
         elif event.type == EVENT_BUTTON_PRESSED:
             if event.button == "LEFT_THUMB":
@@ -84,8 +101,10 @@ while 1:
 
             elif event.button == "LEFT_SHOULDER":
                 print("LEFT_SHOULDER Pressed!")
+                arduinoSerial.write(b"w")
             elif event.button == "RIGHT_SHOULDER":
                 print("RIGHT_SHOULDER Pressed!")
+                arduinoSerial.write(b"x")
 
             elif event.button == "BACK":
                 print("BACK Pressed!")
