@@ -64,16 +64,12 @@ void loop()
         else if (command.equals(INPUT_COMMAND_i))
         {
             //press HOME
-            Keyboard.press(KEY_HOME);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_HOME);
+            sendKeyPress(KEY_HOME);
         }
         else if (command.equals(INPUT_COMMAND_j))
         {
             //press ASCII 'm'
-            Keyboard.press(KEY_m);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_m);
+            sendKeyPress(KEY_m);
         }
         else if (command.equals(INPUT_COMMAND_k))
         {
@@ -108,76 +104,63 @@ void loop()
         else if (command.equals(INPUT_COMMAND_q))
         {
             //press TAB
-            Keyboard.press(KEY_TAB);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_TAB);
+            sendKeyPress(KEY_TAB);
         }
         else if (command.equals(INPUT_COMMAND_r))
         {
             //press ASCII '1'
-            Keyboard.press(KEY_1);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_1);
+            sendKeyPress(KEY_1);
         }
         else if (command.equals(INPUT_COMMAND_s))
         {
             //press ASCII '2'
-            Keyboard.press(KEY_2);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_2);
+            sendKeyPress(KEY_2);
         }
         else if (command.equals(INPUT_COMMAND_t))
         {
             //press ASCII '3'
-            Keyboard.press(KEY_3);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_3);
+            sendKeyPress(KEY_3);
         }
         else if (command.equals(INPUT_COMMAND_u))
         {
             //press ASCII '4'
-            Keyboard.press(KEY_4);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_4);
+            sendKeyPress(KEY_4);
         }
         else if (command.equals(INPUT_COMMAND_v))
         {
             //press TAB
-            Keyboard.press(KEY_space);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_space);
+            sendKeyPress(KEY_space);
         }
         else if (command.equals(INPUT_COMMAND_w))
         {
             //press ASCII '5'
-            Keyboard.press(KEY_5);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_5);
+            sendKeyPress(KEY_5);
         }
         else if (command.equals(INPUT_COMMAND_x))
         {
             //press ASCII '6'
-            Keyboard.press(KEY_6);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_6);
+            sendKeyPress(KEY_6);
         }
         else if (command.equals(INPUT_COMMAND_y))
         {
             //press ASCII '7'
-            Keyboard.press(KEY_7);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_7);
+            sendKeyPress(KEY_7);
         }
         else if (command.equals(INPUT_COMMAND_z))
         {
             //press ASCII '8'
-            Keyboard.press(KEY_8);
-            delay(KEY_DELAY);
-            Keyboard.release(KEY_8);
+            sendKeyPress(KEY_8);
         }
         else
         {
             Serial.println("Invalid command " + command);
         }
     }
+}
+
+int sendKeyPress(int key_to_send)
+{
+    Keyboard.press(key_to_send);
+    delay(KEY_DELAY);
+    Keyboard.release(key_to_send);
 }
