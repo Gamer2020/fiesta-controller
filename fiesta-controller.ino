@@ -147,6 +147,34 @@ void loop()
             delay(KEY_DELAY);
             Keyboard.release(KEY_space);
         }
+        else if (command.equals(INPUT_COMMAND_w))
+        {
+            //press ASCII '5'
+            Keyboard.press(KEY_5);
+            delay(KEY_DELAY);
+            Keyboard.release(KEY_5);
+        }
+        else if (command.equals(INPUT_COMMAND_x))
+        {
+            //press ASCII '6'
+            Keyboard.press(KEY_6);
+            delay(KEY_DELAY);
+            Keyboard.release(KEY_6);
+        }
+        else if (command.equals(INPUT_COMMAND_y))
+        {
+            //press ASCII '7'
+            Keyboard.press(KEY_7);
+            delay(KEY_DELAY);
+            Keyboard.release(KEY_7);
+        }
+        else if (command.equals(INPUT_COMMAND_z))
+        {
+            //press ASCII '8'
+            Keyboard.press(KEY_8);
+            delay(KEY_DELAY);
+            Keyboard.release(KEY_8);
+        }
         else
         {
             Serial.println("Invalid command " + command);
