@@ -45,7 +45,7 @@ while 1:
                     arduinoSerial.write(b"d")
                     arduinoSerial.write(b"f")
                     arduinoSerial.write(b"h")
-                elif event.x < 0.0:  # Left
+                if event.x < 0.0:  # Left
                     arduinoSerial.write(b"a")
                     arduinoSerial.write(b"h")
                 elif event.x > 0.0:  # Right
