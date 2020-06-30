@@ -116,36 +116,36 @@ while 1:
                 print("X Pressed!")
                 arduinoSerial.write(b"t")
 
-        elif event.type == EVENT_BUTTON_RELEASED:
-            # if event.button == "LEFT_THUMB":
-            #     print("LEFT_THUMB Released!")
-            # elif event.button == "RIGHT_THUMB":
-            #     print("RIGHT_THUMB Released!")
+        # elif event.type == EVENT_BUTTON_RELEASED:
+        # if event.button == "LEFT_THUMB":
+        #     print("LEFT_THUMB Released!")
+        # elif event.button == "RIGHT_THUMB":
+        #     print("RIGHT_THUMB Released!")
 
-            if event.button == "LEFT_SHOULDER":
-                print("LEFT_SHOULDER Released!")
-            elif event.button == "RIGHT_SHOULDER":
-                print("RIGHT_SHOULDER Released!")
+        # if event.button == "LEFT_SHOULDER":
+        #     print("LEFT_SHOULDER Released!")
+        # elif event.button == "RIGHT_SHOULDER":
+        #     print("RIGHT_SHOULDER Released!")
 
-            # elif event.button == "BACK":
-            #     print("BACK Released!")
-            elif event.button == "START":
-                print("START Released!")
+        # elif event.button == "BACK":
+        #     print("BACK Released!")
+        # elif event.button == "START":
+        #     print("START Released!")
 
-            # elif event.button == "DPAD_LEFT":
-            #     print("DPAD_LEFT Released!")
-            # elif event.button == "DPAD_RIGHT":
-            #     print("DPAD_RIGHT Released!")
-            # elif event.button == "DPAD_UP":
-            #     print("DPAD_UP Released!")
-            # elif event.button == "DPAD_DOWN":
-            #     print("DPAD_DOWN Released!")
+        # elif event.button == "DPAD_LEFT":
+        #     print("DPAD_LEFT Released!")
+        # elif event.button == "DPAD_RIGHT":
+        #     print("DPAD_RIGHT Released!")
+        # elif event.button == "DPAD_UP":
+        #     print("DPAD_UP Released!")
+        # elif event.button == "DPAD_DOWN":
+        #     print("DPAD_DOWN Released!")
 
-            # elif event.button == "A":
-            #     print("A Released!")
-            # elif event.button == "B":
-            #     print("B Released!")
-            # elif event.button == "Y":
-            #     print("Y Released!")
-            # elif event.button == "X":
-            #     print("X Released!")
+        # elif event.button == "A":
+        #     print("A Released!")
+        # elif event.button == "B":
+        #     print("B Released!")
+        # elif event.button == "Y":
+        #     print("Y Released!")
+        # elif event.button == "X":
+        #     print("X Released!")
