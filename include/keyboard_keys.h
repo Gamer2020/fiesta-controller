@@ -2,6 +2,7 @@
 #define keyboad_keys_h
 
 #define KEY_space 32
+#define KEY_minus 45
 #define KEY_0 48
 #define KEY_1 49
 #define KEY_2 50
@@ -12,6 +13,7 @@
 #define KEY_7 55
 #define KEY_8 56
 #define KEY_9 57
+#define KEY_equal 61
 #define KEY_a 97
 #define KEY_b 98
 #define KEY_c 99

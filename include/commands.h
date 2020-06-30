@@ -1,6 +1,12 @@
 #ifndef commands_h
 #define commands_h
 
+#define INPUT_COMMAND_A "65"
+#define INPUT_COMMAND_B "66"
+#define INPUT_COMMAND_C "67"
+#define INPUT_COMMAND_D "68"
+#define INPUT_COMMAND_E "69"
+#define INPUT_COMMAND_F "70"
 #define INPUT_COMMAND_a "97"
 #define INPUT_COMMAND_b "98"
 #define INPUT_COMMAND_c "99"

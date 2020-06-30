@@ -151,6 +151,26 @@ void loop()
             //press ASCII '8'
             sendKeyPress(KEY_8);
         }
+        else if (command.equals(INPUT_COMMAND_A))
+        {
+            //press ASCII '-'
+            sendKeyPress(KEY_minus);
+        }
+        else if (command.equals(INPUT_COMMAND_B))
+        {
+            //press ASCII '='
+            sendKeyPress(KEY_equal);
+        }
+        else if (command.equals(INPUT_COMMAND_C))
+        {
+            //press ASCII '9'
+            sendKeyPress(KEY_9);
+        }
+        else if (command.equals(INPUT_COMMAND_D))
+        {
+            //press ASCII '0'
+            sendKeyPress(KEY_0);
+        }
         else
         {
             Serial.println("Invalid command " + command);
