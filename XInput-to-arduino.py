@@ -40,7 +40,7 @@ while 1:
         elif event.type == EVENT_STICK_MOVED:
             if event.stick == LEFT:
                 if (event.x == 0.0) and (event.y == 0.0):
-                    print("Left Stick is neutral")
+                    # print("Left Stick is neutral")
                     arduinoSerial.write(b"b")
                     arduinoSerial.write(b"d")
                     arduinoSerial.write(b"f")
@@ -68,7 +68,7 @@ while 1:
 
             elif event.stick == RIGHT:
                 if (event.x == 0.0) and (event.y == 0.0):
-                    print("Right Stick is neutral")
+                    # print("Right Stick is neutral")
                     arduinoSerial.write(b"l")
                 elif event.x < 0.0:  # Left
                     arduinoSerial.write(b"k")
@@ -85,66 +85,66 @@ while 1:
         elif event.type == EVENT_TRIGGER_MOVED:
             if event.trigger == LEFT:
                 if event.value == 0.0:
-                    print("LEFT_TRIGGER Neutral!")
+                    # print("LEFT_TRIGGER Neutral!")
                     left_trig_flag = False
                 elif (event.value > 0.0) and (left_trig_flag == False):
-                    print("LEFT_TRIGGER Pressed!")
+                    # print("LEFT_TRIGGER Pressed!")
                     left_trig_flag = True
                     arduinoSerial.write(b"y")
             elif event.trigger == RIGHT:
                 if event.value == 0.0:
                     right_trig_flag = False
                 elif (event.value > 0.0) and (right_trig_flag == False):
-                    print("RIGHT_TRIGGER Pressed!")
+                    # print("RIGHT_TRIGGER Pressed!")
                     right_trig_flag = True
                     arduinoSerial.write(b"z")
 
         elif event.type == EVENT_BUTTON_PRESSED:
             if event.button == "LEFT_THUMB":
-                print("LEFT_THUMB Pressed!")
+                # print("LEFT_THUMB Pressed!")
                 arduinoSerial.write(b"q")
             elif event.button == "RIGHT_THUMB":
-                print("RIGHT_THUMB Pressed!")
+                # print("RIGHT_THUMB Pressed!")
                 arduinoSerial.write(b"v")
 
             elif event.button == "LEFT_SHOULDER":
-                print("LEFT_SHOULDER Pressed!")
+                # print("LEFT_SHOULDER Pressed!")
                 arduinoSerial.write(b"w")
             elif event.button == "RIGHT_SHOULDER":
-                print("RIGHT_SHOULDER Pressed!")
+                # print("RIGHT_SHOULDER Pressed!")
                 arduinoSerial.write(b"x")
 
             elif event.button == "BACK":
-                print("BACK Pressed!")
+                # print("BACK Pressed!")
                 arduinoSerial.write(b"C")
             elif event.button == "START":
-                print("START Pressed!")
+                # print("START Pressed!")
                 arduinoSerial.write(b"D")
 
             elif event.button == "DPAD_LEFT":
-                print("DPAD_LEFT Pressed!")
+                # print("DPAD_LEFT Pressed!")
                 arduinoSerial.write(b"A")
             elif event.button == "DPAD_RIGHT":
-                print("DPAD_RIGHT Pressed!")
+                # print("DPAD_RIGHT Pressed!")
                 arduinoSerial.write(b"B")
             elif event.button == "DPAD_UP":
-                print("DPAD_UP Pressed!")
+                # print("DPAD_UP Pressed!")
                 arduinoSerial.write(b"j")
             elif event.button == "DPAD_DOWN":
-                print("DPAD_DOWN Pressed!")
+                # print("DPAD_DOWN Pressed!")
                 arduinoSerial.write(b"i")
 
             elif event.button == "A":
-                print("A Pressed!")
+                # print("A Pressed!")
                 arduinoSerial.write(b"r")
             elif event.button == "B":
-                print("B Pressed!")
+                # print("B Pressed!")
                 arduinoSerial.write(b"s")
             elif event.button == "Y":
-                print("Y Pressed!")
+                # print("Y Pressed!")
                 arduinoSerial.write(b"u")
             elif event.button == "X":
-                print("X Pressed!")
+                # print("X Pressed!")
                 arduinoSerial.write(b"t")
 
         # The below is left here in case someone want's to do something on release.
