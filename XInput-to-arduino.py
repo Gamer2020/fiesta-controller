@@ -47,16 +47,24 @@ while 1:
                     arduinoSerial.write(b"h")
                 if event.x < -0.75:  # Left
                     arduinoSerial.write(b"a")
+                    arduinoSerial.write(b"d")
+                    arduinoSerial.write(b"f")
                     arduinoSerial.write(b"h")
                 elif event.x > 0.75:  # Right
-                    arduinoSerial.write(b"b")
                     arduinoSerial.write(b"g")
+                    arduinoSerial.write(b"b")
+                    arduinoSerial.write(b"d")
+                    arduinoSerial.write(b"f")
                 if event.y > 0.75:  # Up
                     arduinoSerial.write(b"c")
+                    arduinoSerial.write(b"b")
                     arduinoSerial.write(b"f")
+                    arduinoSerial.write(b"h")
                 elif event.y < -0.75:  # Down
-                    arduinoSerial.write(b"d")
                     arduinoSerial.write(b"e")
+                    arduinoSerial.write(b"b")
+                    arduinoSerial.write(b"d")
+                    arduinoSerial.write(b"h")
 
             elif event.stick == RIGHT:
                 if (event.x == 0.0) and (event.y == 0.0):
